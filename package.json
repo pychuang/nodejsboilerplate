@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pychuang/nodejsboilerplate/issues"
   },
-  "homepage": "https://github.com/pychuang/nodejsboilerplate#readme"
+  "homepage": "https://github.com/pychuang/nodejsboilerplate#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

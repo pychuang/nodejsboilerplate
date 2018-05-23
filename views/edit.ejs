@@ -1,0 +1,14 @@
+<h2>Edit blog</h2>
+<% include partials/header %>
+
+<form action="/blogs/<%= blog.id %>?_method=PUT" method="POST">
+  <label>Title</label>
+  <input type="text" name="blog[title]" value="<%= blog.title %>">
+  <label>Content</label>
+  <textarea name="blog[body]"><%= blog.body %></textarea>
+  <input type="submit">
+</form>
+
+<a href="/blogs">Go back</a>
+
+<% include partials/footer %>

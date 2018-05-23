@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+<h1>Index page</h1>
+
+<form action="/blogs/new" method="GET">
+  <button>New Blog</button>
+</form>
+
+<% blogs.forEach(function(blog) { %>
+  <% if (!blog) return; %> <!-- to work around the array limitation -->
+
+  <div class="blog">
+    <a href="/blogs/<%= blog.id %>">
+      <h2><%= blog.title %></h2>
+    </a>
+    <p><%= blog.body %></p>
+  </div>
+<% }) %>
+
+<% include partials/footer %>
